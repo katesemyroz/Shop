@@ -3,21 +3,22 @@
   <head>
     <title>Shop</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="container" style="padding-top: 50px">
-      <%= render "layouts/main" %>
+    <div class="container" style="display: flex">
+      <%= render "layouts/menu" %>
 
       <%if notice%>
         <p id="notice" style="padding: 25px; background-color: green; color: white;">
           <%= notice %>
         </p>
       <%end%>
-      <%= yield %>
+      <div style="display: inline-block; width:calc(100vw - 120px); padding: 10px">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
