@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Socks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th>Color</th>
+      <th>Damages</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @socks.each do |sock| %>
+      <tr>
+        <td><%= sock.name %></td>
+        <td><%= sock.price %></td>
+        <td><%= sock.size %></td>
+        <td><%= sock.color %></td>
+        <td><%= sock.damages %></td>
+        <td><%= sock.description %></td>
+        <td><%= link_to 'Show', sock %></td>
+        <td><%= link_to 'Edit', edit_sock_path(sock) %></td>
+        <td><%= link_to 'Destroy', sock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sock', new_sock_path %>

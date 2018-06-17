@@ -1,0 +1,47 @@
+<%= form_with(model: sock, local: true) do |form| %>
+  <% if sock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sock.errors.count, "error") %> prohibited this sock from being saved:</h2>
+
+      <ul>
+      <% sock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :sock_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :sock_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.number_field :size, id: :sock_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :sock_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :damages %>
+    <%= form.text_field :damages, id: :sock_damages %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :sock_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

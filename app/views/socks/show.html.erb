@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sock.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sock.price %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @sock.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @sock.color %>
+</p>
+
+<p>
+  <strong>Damages:</strong>
+  <%= @sock.damages %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sock.description %>
+</p>
+
+<%= link_to 'Edit', edit_sock_path(@sock) %> |
+<%= link_to 'Back', socks_path %>

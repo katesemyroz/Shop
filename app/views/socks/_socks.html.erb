@@ -1,0 +1,11 @@
+<div>
+    <% list.each do |sock| %>
+        <div style="display: inline-block">
+            <%= image_tag "#{sock.id}.png", :style => "width: 200px" %></br>
+            <%= sock.name %></br>
+            <%= sock.description %></br>
+            <%= "#{sock.price} PLN" %>
+        </div>
+    <% end %>
+</div>
+<%= will_paginate list %>
