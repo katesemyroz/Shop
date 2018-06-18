@@ -1,13 +1,14 @@
 <div>
     <% list.each do |sock| %>
         <div 
-            style="display: inline-block; 
-            padding: 30px; 
-            width: 250px;">
-            <%= image_tag "#{sock.id}.png", :style => "width: 200px" %></br>
+            style="display: inline-flex;
+            flex-direction: column; 
+            padding: 30px;
+            width: 300px;">
+            <%= image_tag "#{sock.id}.png", :style => "width: 200px; margin: 0 auto;" %></br>
             <div 
                 style="background-color: white;
-                margin: 0 25%;
+                margin: 0 auto;
                 min-width: 80px;
                 border-radius: 17px;
                 text-align: center;
@@ -19,20 +20,21 @@
             </div>
             <div 
                 style="background: linear-gradient(to top right, rgb(240, 11, 172), rgb(248, 179, 110));
-                margin-top: -70px;
+                margin-top: -75px;
                 width: 80px;
                 height: 80px;
                 border-radius: 50%;
                 text-align: center;
                 line-height: 80px;
                 position: relative;
-                top: -80px;
-                right: -160px;">
+                right: -220px;
+                top: -100px;">
                 <%= "#{sock.price} PLN" %>
             </div>
             <hr 
                 style="background: radial-gradient(circle, #000, #fff); 
                 height: 1px; 
+                width: 100%;
                 border-width:0px;"/>
         </div>
         <hr 
