@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="container" style="display: flex">
+    <div class="container" style="display: flex; height: 100vh">
       <%= render "layouts/menu" %>
 
       <%if notice%>
@@ -16,7 +16,11 @@
           <%= notice %>
         </p>
       <%end%>
-      <div style="display: inline-block; width:calc(100vw - 70px); padding: 20px; background-color: rgb(240,241,242)">
+      <div 
+        style="display: inline-block; 
+        width: 100%; 
+        padding: 20px;
+        margin-left: 50px">
         <%= yield %>
       </div>
     </div>

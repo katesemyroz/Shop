@@ -1,2 +1,5 @@
 <h1 style="text-align: center">Find your perfect match!</h1>
-<%= render "socks/socks" , list: @recent_socks %>
+<div style="display: flex; align-items: flex-start">
+    <%= render "socks/socks" , list: @recent_socks %>
+    <%= render "socks/sock_description", sock: @current_sock %>
+</div>

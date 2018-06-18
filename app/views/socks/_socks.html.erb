@@ -1,11 +1,17 @@
+<script type="application/javascript">
+function show_description(i) {
+    console.log("kdsflkd")
+}
+</script>
+
 <div>
     <% list.each do |sock| %>
-        <div 
+        <div onclick="show_description(sock)"
             style="display: inline-flex;
             flex-direction: column; 
             padding: 30px;
-            width: 300px;">
-            <%= image_tag "#{sock.id}.png", :style => "width: 200px; margin: 0 auto;" %></br>
+            width: 300px;" >
+            <%= image_tag "1.png", :style => "width: 200px; margin: 0 auto;" %></br>
             <div 
                 style="background-color: white;
                 margin: 0 auto;
@@ -45,5 +51,5 @@
             border-width: 0px;
             width: 1px;"/>
     <% end %>
+    <%= will_paginate list %>
 </div>
-<%= will_paginate list %>

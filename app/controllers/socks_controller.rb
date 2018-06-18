@@ -1,6 +1,10 @@
 class SocksController < ApplicationController
   before_action :set_sock, only: [:show, :edit, :update, :destroy]
 
+  def action1
+    @current_sock = Sock.all[2]
+  end
+
   # GET /socks
   # GET /socks.json
   def index
